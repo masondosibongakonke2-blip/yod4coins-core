@@ -1,0 +1,44 @@
+# Monetary Anchor – 120% Gold Over-Collateralisation
+
+## Purpose
+To provide a hard, verifiable floor for the settlement system and protect against hyperinflation and pure speculative collapse.
+
+## Core Rule
+The circulating digital value represented in the system is targeted to be backed by **120% physical gold** (or equivalent allocated gold claims under independent custody).
+
+This means for every 100 units of digital value in circulation, there should be at least 120 units of value held in physical gold reserves.
+
+## Why 120%
+- Creates a mathematical buffer above full backing
+- Absorbs operational costs, custody fees, and minor discrepancies
+- Makes the system more resistant to sudden redemption pressure
+- Signals serious long-term monetary intent rather than fractional promises
+
+## How It Fits YOD4COINS
+
+| Historical Gold Standard Problem      | YOD4COINS Structural Response                          |
+|---------------------------------------|--------------------------------------------------------|
+| Governments lied about reserves       | Transparent on-chain / protocol-level reporting + independent audits |
+| Easy over-issuance                    | Supply rules + collateralisation floor enforced in protocol logic |
+| Slow physical transport               | Local offline finality — ownership moves digitally, gold stays vaulted |
+| No automatic funding of the system    | 0.1% protocol fee provides continuous operational funding |
+
+## Offline Operation & Proof of Reserves
+
+Full real-time cryptographic verification of physical vault reserves while nodes are completely offline is not possible in the strict sense (physical gold cannot be cryptographically proven without some trusted or semi-trusted oracle/custody layer).
+
+Practical design approach:
+- **Normal & Partitioned modes**: Edge nodes can carry recent, signed Proof-of-Reserve attestations.
+- **Extreme mode (1f+1)**: Nodes operate on the last known valid collateralisation state and hard local limits. Full reserve verification resumes on reconciliation.
+- Periodic independent audits + cryptographic attestations from custodians form the bridge between physical gold and the digital system.
+
+This keeps the offline-first property while still anchoring the system to a hard asset.
+
+## Status
+This is an architectural monetary layer. Implementation requires:
+- Legal custody arrangements
+- Independent auditing
+- Clear redemption / issuance rules
+- Integration with the existing fee and supply logic
+
+It is designed as a long-term stability upgrade once the core offline settlement protocol has real usage and revenue.
