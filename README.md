@@ -85,7 +85,11 @@ This logic is designed to be enforced at the protocol level.
 - Founder allocation with multi-year vesting  
 - Node and validator rewards  
 - Ecosystem / community allocation  
-- Transparent 0.1% protocol utility fee  
+- Transparent 0.1% protocol utility fee
+
+-   
+### Monetary Anchor (Future)
+A 120% gold over-collateralisation target is designed as a long-term monetary stability layer. The goal is to give the settlement system a hard purchasing-power floor and reduce vulnerability to hyperinflation and pure speculative collapse, while preserving the offline-first and partition-tolerant properties of the core protocol.
 
 See `docs/TOKENOMICS.md` for full details.
 
@@ -109,15 +113,16 @@ Live prototype:https://codepen.io/editor/Sibongakonke-Masondo/pen/01a164da-6a8a-
 - Human authority remains a hard requirement in extreme isolation mode.
 
 ---
+## Monetary Anchor (Long-term Stability Layer)
 
-##Author
+A 120% gold over-collateralisation target is designed as a future monetary stability layer for the system.
 
-Sibongakonke Masondo
-Systems Architect  
-South Africa
+The goal is to back circulating digital value with 20% more physical gold than the outstanding supply, creating a hard purchasing-power floor. This helps protect against hyperinflation and pure speculative collapse while preserving the offline-first and partition-tolerant nature of the protocol.
 
----
+Key properties:
+- Hard collateral floor rather than pure promise or pure speculation
+- Digital ownership can still move offline (gold remains vaulted)
+- 0.1% protocol fee continues to fund operations automatically
+- Full real-time Proof of Reserves is performed when connected; offline nodes operate on the last verified state + strict local limits
 
-##License
-
-MIT License
+This layer is planned for later implementation once the core settlement protocol has real usage.
